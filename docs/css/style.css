@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 body,
 html {
   height: 100vh;
@@ -8,6 +15,8 @@ body {
 }
 
 a {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -80,6 +89,14 @@ a {
 
 .nebula-home-page .btn-primary {
   background-color: #ee6d03;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ee6d03),
+    to(#f09819)
+  );
+  background-image: -o-linear-gradient(left, #ee6d03, #f09819);
   background-image: linear-gradient(to right, #ee6d03, #f09819);
   border-color: transparent;
 }
@@ -164,8 +181,14 @@ nav.navbar-dark .navbar-nav .nav-link {
 
 #hero {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-image: url("../img/bg_banner.svg");
   background-repeat: no-repeat;
@@ -210,7 +233,16 @@ nav.navbar-dark .navbar-nav .nav-link {
   right: 0;
   width: 300px;
   height: 100%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#02406a),
+    to(#03729a)
+  );
+  background: -o-linear-gradient(top, #02406a, #03729a);
   background: linear-gradient(to bottom, #02406a, #03729a);
+  -webkit-filter: blur(160px);
   filter: blur(160px);
   z-index: -1;
   opacity: 1;
@@ -255,6 +287,14 @@ nav.navbar-dark .navbar-nav .nav-link {
 }
 
 #numeros {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ee6d03),
+    to(#f09819)
+  );
+  background-image: -o-linear-gradient(left, #ee6d03, #f09819);
   background-image: linear-gradient(to right, #ee6d03, #f09819);
   padding-top: 1.8rem;
   padding-bottom: 1.8rem;
@@ -339,7 +379,16 @@ nav.navbar-dark .navbar-nav .nav-link {
   display: block;
   width: 300px;
   height: 300px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#02406a),
+    to(#03729a)
+  );
+  background: -o-linear-gradient(top, #02406a, #03729a);
   background: linear-gradient(to bottom, #02406a, #03729a);
+  -webkit-filter: blur(200px);
   filter: blur(200px);
   z-index: -1;
 }
@@ -361,6 +410,7 @@ nav.navbar-dark .navbar-nav .nav-link {
   #carteiras::before {
     width: 150px;
     height: 200px;
+    -webkit-filter: blur(120px);
     filter: blur(120px);
   }
   #carteiras::after {
@@ -395,7 +445,16 @@ nav.navbar-dark .navbar-nav .nav-link {
   width: 300px;
   height: 50%;
   border-radius: 100% 0 0 100%;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#fb7303),
+    to(#f09819)
+  );
+  background: -o-linear-gradient(right, #fb7303, #f09819);
   background: linear-gradient(to left, #fb7303, #f09819);
+  -webkit-filter: blur(200px);
   filter: blur(200px);
   z-index: -1;
   opacity: 1;
@@ -420,6 +479,7 @@ nav.navbar-dark .navbar-nav .nav-link {
     top: 50%;
     width: 50%;
     height: 50%;
+    -webkit-filter: blur(180px);
     filter: blur(180px);
   }
 }
@@ -428,6 +488,7 @@ nav.navbar-dark .navbar-nav .nav-link {
   #compra-venda::after {
     width: 150px;
     height: 200px;
+    -webkit-filter: blur(140px);
     filter: blur(140px);
     top: 50%;
   }
@@ -445,7 +506,16 @@ nav.navbar-dark .navbar-nav .nav-link {
   left: 0;
   width: 300px;
   height: 300px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#02406a),
+    to(#03729a)
+  );
+  background: -o-linear-gradient(top, #02406a, #03729a);
   background: linear-gradient(to bottom, #02406a, #03729a);
+  -webkit-filter: blur(200px);
   filter: blur(200px);
   z-index: -1;
   opacity: 1;
@@ -462,6 +532,14 @@ nav.navbar-dark .navbar-nav .nav-link {
   width: 140px;
   height: 4px;
   background-color: #fb7303;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ee6d03),
+    to(#f09819)
+  );
+  background-image: -o-linear-gradient(left, #ee6d03, #f09819);
   background-image: linear-gradient(to right, #ee6d03, #f09819);
   position: relative;
   margin: 1rem auto;
@@ -492,12 +570,25 @@ nav.navbar-dark .navbar-nav .nav-link {
   font-weight: 500;
   font-style: normal;
   font-size: 10.5rem;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgba(255, 255, 255, 0)),
+    to(rgba(255, 255, 255, 1))
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
   background-image: linear-gradient(
     to top,
     rgba(255, 255, 255, 0),
     rgba(255, 255, 255, 1)
   );
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
 }
 
@@ -523,6 +614,7 @@ nav.navbar-dark .navbar-nav .nav-link {
   #como-funciona::after {
     width: 150px;
     height: 200px;
+    -webkit-filter: blur(120px);
     filter: blur(120px);
     bottom: -10%;
   }
@@ -566,7 +658,16 @@ nav.navbar-dark .navbar-nav .nav-link {
   right: 0;
   width: 300px;
   height: 300px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#02406a),
+    to(#03729a)
+  );
+  background: -o-linear-gradient(top, #02406a, #03729a);
   background: linear-gradient(to bottom, #02406a, #03729a);
+  -webkit-filter: blur(200px);
   filter: blur(200px);
   z-index: -1;
   opacity: 1;
@@ -581,7 +682,16 @@ nav.navbar-dark .navbar-nav .nav-link {
   left: 0;
   width: 300px;
   height: 300px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#02406a),
+    to(#03729a)
+  );
+  background: -o-linear-gradient(top, #02406a, #03729a);
   background: linear-gradient(to bottom, #02406a, #03729a);
+  -webkit-filter: blur(200px);
   filter: blur(200px);
   z-index: -1;
   opacity: 1;
@@ -617,6 +727,7 @@ nav.navbar-dark .navbar-nav .nav-link {
   #faq::after {
     width: 150px;
     height: 200px;
+    -webkit-filter: blur(120px);
     filter: blur(120px);
   }
 }
@@ -681,6 +792,14 @@ nav.navbar-dark .navbar-nav .nav-link {
 
 footer {
   padding: 24px 0;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ee6d03),
+    to(#f09819)
+  );
+  background-image: -o-linear-gradient(top, #ee6d03, #f09819);
   background-image: linear-gradient(to bottom, #ee6d03, #f09819);
 }
 
