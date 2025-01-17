@@ -45,7 +45,7 @@ h2 {
   left: 0;
   width: 100%;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .nebula-home-page .container {
@@ -140,9 +140,10 @@ nav a.navbar-brand .logo-mobile {
   display: none;
 }
 
-nav a.nav-link {
+nav.navbar-dark .navbar-nav .nav-link {
   font-weight: 300;
   font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 @media screen and (max-width: 991.98px) {
@@ -156,7 +157,7 @@ nav a.nav-link {
 
   .nav-buttons {
     position: absolute;
-    top: 8px;
+    top: 6px;
     right: 60px;
   }
 }
