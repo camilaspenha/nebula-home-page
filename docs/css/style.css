@@ -101,9 +101,22 @@ a {
   border-color: transparent;
 }
 
+.nebula-home-page .btn-primary:active,
+.nebula-home-page .btn-primary:hover {
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #fff;
+}
+
 .nebula-home-page .btn-outline-light {
   border-color: #fff;
   color: #fff;
+}
+
+.nebula-home-page .btn-outline-light:active,
+.nebula-home-page .btn-outline-light:hover {
+  background-color: #f09819;
+  border: 1px solid #f09819;
 }
 
 @media screen and (max-width: 575.98px) {
