@@ -210,11 +210,11 @@ nav.navbar-dark .navbar-nav .nav-link {
   right: 0;
   width: 300px;
   height: 100%;
-  border-radius: 50%;
   background: linear-gradient(to bottom, #02406a, #03729a);
-  filter: blur(150px);
+  filter: blur(160px);
   z-index: -1;
-  opacity: 0.5;
+  opacity: 1;
+  border-radius: 100% 0 0 100%;
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -229,6 +229,7 @@ nav.navbar-dark .navbar-nav .nav-link {
   #hero {
     height: auto;
     background-image: url("../img/bg_hero.svg");
+    padding-top: 3rem;
   }
 
   #hero p {
@@ -251,12 +252,6 @@ nav.navbar-dark .navbar-nav .nav-link {
   #hero img {
     max-width: 100%;
   }
-
-  #hero .content.img-shadow::after {
-    width: 50%;
-    height: 300px;
-    filter: blur(70px);
-  }
 }
 
 #numeros {
@@ -273,12 +268,6 @@ nav.navbar-dark .navbar-nav .nav-link {
 #numeros .title {
   max-width: 160px;
   margin: auto;
-}
-
-@media screen and (max-width: 575.98px) {
-  #numeros .title h2 {
-    font-size: 2.1rem !important;
-  }
 }
 
 #numeros .title span,
@@ -301,6 +290,12 @@ nav.navbar-dark .navbar-nav .nav-link {
   margin: auto;
 }
 
+@media screen and (max-width: 575.98px) {
+  #numeros .title h2 {
+    font-size: 2.1rem !important;
+  }
+}
+
 @media screen and (max-width: 991.98px) {
   #numeros .container .row {
     max-width: 580px;
@@ -310,21 +305,6 @@ nav.navbar-dark .navbar-nav .nav-link {
 
 #carteiras {
   position: relative;
-}
-
-#carteiras::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  right: 0;
-  width: 400px;
-  height: 300px;
-  border-radius: 50%;
-  background: linear-gradient(to bottom, #02406a, #03729a);
-  filter: blur(150px);
-  z-index: -1;
-  opacity: 0.5;
 }
 
 #carteiras .content .text {
@@ -352,44 +332,43 @@ nav.navbar-dark .navbar-nav .nav-link {
   position: relative;
 }
 
-#carteiras .produtos::before {
+#carteiras::before,
+#carteiras::after {
   content: "";
   position: absolute;
   display: block;
-  top: 60%;
-  left: -20%;
-  width: 400px;
+  width: 300px;
   height: 300px;
-  border-radius: 50%;
   background: linear-gradient(to bottom, #02406a, #03729a);
-  filter: blur(150px);
+  filter: blur(200px);
   z-index: -1;
-  opacity: 0.5;
 }
 
-#carteiras .compra-venda .img-shadow {
-  position: relative;
-}
-#carteiras .compra-venda .img-shadow::after {
-  content: "";
-  position: absolute;
-  display: block;
+#carteiras::before {
   top: 0;
   right: 0;
-  width: 290px;
-  height: 90%;
-  border-radius: 50%;
-  background: linear-gradient(to left, #fb7303, #f09819);
-  filter: blur(150px);
-  z-index: -1;
-  opacity: 0.7;
+  border-radius: 100% 0px 0px 100%;
+}
+
+#carteiras::after {
+  bottom: -20%;
+  left: 0;
+  border-radius: 0 100% 100% 0;
+}
+
+@media screen and (max-width: 991.98px) {
+  #carteiras::after,
+  #carteiras::before {
+    width: 150px;
+    height: 200px;
+    filter: blur(120px);
+  }
+  #carteiras::after {
+    bottom: 0;
+  }
 }
 
 @media screen and (min-width: 992px) {
-  #carteiras .compra-venda {
-    padding-top: 4rem;
-  }
-
   #carteiras .section-title {
     max-width: 420px;
   }
@@ -403,23 +382,54 @@ nav.navbar-dark .navbar-nav .nav-link {
   }
 }
 
+#compra-venda {
+  position: relative;
+}
+
+#compra-venda::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 10%;
+  right: 0;
+  width: 300px;
+  height: 50%;
+  border-radius: 100% 0 0 100%;
+  background: linear-gradient(to left, #fb7303, #f09819);
+  filter: blur(200px);
+  z-index: -1;
+  opacity: 1;
+}
+
+#compra-venda .content .img img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  #compra-venda {
+    padding-top: 4rem;
+  }
+}
+
 @media screen and (max-width: 575.98px) {
-  #carteiras::after {
+  #compra-venda .content .img {
+    margin-top: 3rem;
+  }
+
+  #compra-venda::after {
+    top: 50%;
     width: 50%;
+    height: 50%;
+    filter: blur(180px);
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  #compra-venda::after {
+    width: 150px;
     height: 200px;
-    filter: blur(90px);
-    top: -32px;
-  }
-
-  #carteiras .produtos::before {
-    width: 50%;
-    filter: blur(120px);
-    top: unset;
-    bottom: 0;
-  }
-
-  #carteiras .compra-venda .img-shadow::after {
-    width: 50%;
+    filter: blur(140px);
+    top: 50%;
   }
 }
 
@@ -427,19 +437,19 @@ nav.navbar-dark .navbar-nav .nav-link {
   position: relative;
 }
 
-#como-funciona::before {
+#como-funciona::after {
   content: "";
   position: absolute;
   display: block;
-  top: 60%;
-  left: -10%;
-  width: 400px;
+  bottom: -20%;
+  left: 0;
+  width: 300px;
   height: 300px;
-  border-radius: 50%;
   background: linear-gradient(to bottom, #02406a, #03729a);
-  filter: blur(150px);
+  filter: blur(200px);
   z-index: -1;
-  opacity: 0.5;
+  opacity: 1;
+  border-radius: 0 100% 100% 0;
 }
 
 #como-funciona .section-title {
@@ -509,12 +519,12 @@ nav.navbar-dark .navbar-nav .nav-link {
   }
 }
 
-@media screen and (max-width: 575.98px) {
-  #como-funciona::before {
-    width: 50%;
-    filter: blur(130px);
-    top: unset;
-    bottom: -100px;
+@media screen and (max-width: 991.98px) {
+  #como-funciona::after {
+    width: 150px;
+    height: 200px;
+    filter: blur(120px);
+    bottom: -10%;
   }
 }
 
@@ -535,9 +545,10 @@ nav.navbar-dark .navbar-nav .nav-link {
     padding-top: 20px;
   }
 }
+
 @media screen and (max-width: 575.98px) {
   #quem-somos {
-    background-position-y: 60%;
+    background-position-y: calc(100% - 100px);
     margin-top: 0;
   }
 }
@@ -551,45 +562,44 @@ nav.navbar-dark .navbar-nav .nav-link {
   content: "";
   position: absolute;
   display: block;
-  top: 60%;
-  left: -10%;
-  width: 400px;
+  top: 0;
+  right: 0;
+  width: 300px;
   height: 300px;
-  border-radius: 50%;
   background: linear-gradient(to bottom, #02406a, #03729a);
-  filter: blur(150px);
+  filter: blur(200px);
   z-index: -1;
-  opacity: 0.5;
+  opacity: 1;
+  border-radius: 100% 0 0 100%;
 }
 
 #faq::after {
   content: "";
   position: absolute;
   display: block;
-  top: 0;
-  right: 0;
-  width: 400px;
+  bottom: 0;
+  left: 0;
+  width: 300px;
   height: 300px;
-  border-radius: 50%;
   background: linear-gradient(to bottom, #02406a, #03729a);
-  filter: blur(150px);
+  filter: blur(200px);
   z-index: -1;
-  opacity: 0.5;
+  opacity: 1;
+  border-radius: 0 100% 100% 0;
 }
 
 #faq .accordion-item {
   background-color: transparent;
   color: #848484;
+  margin-bottom: 2rem;
 }
 
 #faq .accordion-button {
   color: #fff;
   background-color: transparent;
-  border: 1px solid red;
   padding: 1.5rem;
   border: 1px solid #848484;
   border-radius: 12px;
-  margin-bottom: 2rem;
 }
 
 #faq .accordion-button::after {
@@ -600,18 +610,14 @@ nav.navbar-dark .navbar-nav .nav-link {
   #faq {
     padding-top: 32px;
   }
-  #faq::before {
-    width: 50%;
+}
+
+@media screen and (max-width: 991.98px) {
+  #faq::before,
+  #faq::after {
+    width: 150px;
     height: 200px;
     filter: blur(120px);
-    top: unset;
-    bottom: 0;
-  }
-
-  #faq::after {
-    width: 50%;
-    height: 200px;
-    filter: blur(130px);
   }
 }
 
@@ -672,6 +678,7 @@ nav.navbar-dark .navbar-nav .nav-link {
     word-break: break-all;
   }
 }
+
 footer {
   padding: 24px 0;
   background-image: linear-gradient(to bottom, #ee6d03, #f09819);
